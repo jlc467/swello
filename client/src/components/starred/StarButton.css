@@ -1,0 +1,41 @@
+.button:focus {
+  outline: none;
+}
+
+.star {
+  position: relative;
+  background-color: #2069A9;
+  cursor: pointer;
+  margin: 0px auto;
+  height: 35px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+}
+
+.star:hover {
+  background-color: #488AB8;
+}
+
+.star:focus {
+  outline: none;
+}
+
+.removeStar span {
+  display: none;
+}
+
+.removeStar:hover span {
+  display: inline;
+}
+
+.text {
+  float: right;
+  padding-top: 4px;
+  padding-left: 5px;
+  padding-right: 2px;
+}

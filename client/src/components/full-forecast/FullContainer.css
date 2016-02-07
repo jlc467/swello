@@ -1,0 +1,14 @@
+.container {
+  margin: auto;
+  max-width: 900px;
+  padding-top: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.loader {
+  position: absolute;
+  margin: auto;
+  right: 50%;
+  top: 100px;
+}

@@ -1,0 +1,25 @@
+.header {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 65px;
+}
+
+.close {
+  float: left;
+  cursor: pointer;
+  fill: #A4C294;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.container {
+   overflow-y: auto;
+   position: fixed;
+   width: 250px;
+   height: 100%;
+   top: 0px;
+   z-index: 9999;
+   background-color: #1E2B33;
+}

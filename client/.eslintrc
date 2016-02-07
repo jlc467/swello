@@ -1,0 +1,21 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "node": true
+  },
+  "rules": {
+    "no-param-reassign": 0,
+    'react/jsx-no-bind': 0,
+    "new-cap": 0,
+    "react/prop-types": 0,
+    "comma-dangle": 0,
+    "react/no-multi-comp": 0,
+    "no-unused-vars": [2, {"args": "after-used", "argsIgnorePattern": "^_"}]
+  },
+  "plugins": [
+    "react"
+  ]
+}

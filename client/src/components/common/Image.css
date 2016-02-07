@@ -1,0 +1,15 @@
+.initial {
+  opacity: 0;
+  transition: opacity 1.0s;
+  pointer-events: auto;
+}
+.loaded {
+  opacity: 1;
+  pointer-events: auto;
+}
+.loader {
+  position: absolute;
+  margin: auto;
+  right: 50%;
+  top: 50%;
+}

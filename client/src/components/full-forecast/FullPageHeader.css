@@ -1,0 +1,21 @@
+.header {
+  margin-top: 10px;
+}
+
+.button {
+  background-color: white;
+  cursor: pointer;
+  margin: 0px auto;
+  margin-right: 5px;
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+  text-align: center;
+  color: #24475F;
+}
+
+.button:focus {
+  outline: none;
+}

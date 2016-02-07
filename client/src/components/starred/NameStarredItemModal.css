@@ -1,0 +1,54 @@
+
+.container {
+  position: absolute;
+  width: 260px;
+  height: 100px;
+  margin-top: 7px;
+  margin-left: 0px;
+  z-index: 999;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.button {
+  background-color: white;
+  cursor: pointer;
+  height: 34px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+  text-align: center;
+  color: #24475F;
+
+}
+
+.nameInput {
+  width: 200px;
+  display: inline-block;
+  box-sizing: border-box;
+  appearance: none;
+  background-color: white;
+  border: 1px solid #cdd2d4;
+  border-radius: 3px;
+  margin-top: 34px;
+  min-height: 34px;
+  padding: 7px;
+  color: black;
+  font-size: small;
+}
+.close {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  cursor: pointer;
+  fill: #A4C294;
+  width: 20px;
+}

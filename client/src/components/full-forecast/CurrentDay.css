@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  background-color: #1E2B33;
+  color: white;
+  border: 3px solid #3488BB;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.text {
+  color: white;
+  padding: 10px 20px 8px 20px;
+  max-width: 500px;
+  margin-left: 15px;
+}
+
+.now {
+  min-width: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-left: 11px;
+}

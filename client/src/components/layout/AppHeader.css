@@ -1,0 +1,54 @@
+.center {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.app-header {
+  background-color: #3588BB;
+  opacity: 1;
+  position: absolute;
+  min-width: 220px;
+  height: 40px;
+  overflow: none;
+  top: 0px;
+  width: 100%;
+  z-index: 3000;
+  text-align: center;
+  color: #F4C66C;
+}
+
+.app-header-title {
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+  padding-right: 10px;
+  padding-left: 35px;
+  padding-right: 80px;
+  padding-top:4px;
+}
+
+.app-header-button {
+  border: none;
+  background: none;
+  height: 40px;
+  fill: white;
+  cursor: pointer;
+}
+
+.app-header-button:hover {
+  background-color: #1168AD;
+  transition: all 150ms ease-in;
+}
+
+.app-header-button:focus {
+  outline: none;
+}
+
+.app-header-button:active svg {
+  padding-top: 1px;
+}
+
+.app-header-button svg {
+  fill: inherit;
+}
