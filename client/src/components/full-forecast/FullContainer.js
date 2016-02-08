@@ -42,7 +42,6 @@ class FullContainer extends Component {
         this.setState({ favorite: fav });
         document.title = `${fav.text} | Swello`;
       } else {
-        document.title = 'Full Forecast | Swello';
         this.context.router.push({
           pathname: '/map',
           query: location.query

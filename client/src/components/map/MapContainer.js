@@ -40,6 +40,7 @@ class MapContainer extends Component {
       marine,
       marineError,
       starredEnabled,
+      starredItems
     } = this.props;
 
     // map style
@@ -78,6 +79,7 @@ class MapContainer extends Component {
           ref="glmap"
           token={config.token.map}
           view={this.mapView}
+          starredItems={starredItems}
         />
       </div>
     );
@@ -94,6 +96,7 @@ function mapStateToProps(state) {
     loadingForecast: state.appState.loadingForecast,
     loadingMarine: state.appState.loadingMarine,
     starredEnabled: state.appState.starredEnabled,
+    starredItems: state.appState.starredItems,
     disableGetLocation: state.appState.disableGetLocation
   };
 }

@@ -6,6 +6,7 @@ import MiniForecast from './MiniForecast';
 import Radar from '../common/Radar';
 import css from './GLMap.css';
 import loader from '../common/svg/radio.svg';
+import { find } from 'lodash';
 
 class GLMap extends Component {
   constructor(props) {
@@ -22,7 +23,6 @@ class GLMap extends Component {
   componentDidMount() {
     mapboxgl.accessToken = this.props.token;
     this.map = new mapboxgl.Map(this.props.view);
-    this.map.addControl(new mapboxgl.Navigation({ position: 'bottom-right' }));
     this.map.dragRotate.disable();
     this.map.touchZoomRotate.disableRotation();
     this.map.boxZoom.disable();
@@ -80,6 +80,21 @@ class GLMap extends Component {
           { lat: this.props.params.lat, long: this.props.params.long },
           this.props.params.zoneId
         );
+      } else if (this.props.location.pathname.indexOf('favorite')) {
+        const fav = find(this.props.starredItems, (o) =>
+          o.id.toString() === this.props.params.favoriteId
+        );
+        if (fav) {
+          this.handleMarkerPlacement(
+            { lat: fav.lat, long: fav.long },
+            fav.zoneId
+          );
+        } else { // fav not found
+          this.context.router.push({
+            pathname: '/map',
+            search: this.props.location.search
+          });
+        }
       }
     });
   }
@@ -350,13 +365,13 @@ class GLMap extends Component {
           id="map"
         ></div>
           <div className={css.credits}>
-            Maps Powered By
-            <a href="https://www.mapbox.com/about/maps/" target="_blank">&nbsp;© Mapbox&nbsp;//</a>
-            <a href="http://www.openstreetmap.org/about/" target="_blank">&nbsp;© OpenStreetMap&nbsp;//</a>
-            &nbsp;Weather Powered By
-            <a href="https://forecast.io/" target="_blank">&nbsp;Forecast.io&nbsp;//</a>
-            <a href="https://wunderground.com/" target="_blank">&nbsp;© Weather Underground&nbsp;//</a>
-            <a href="http://www.nws.noaa.gov/om/marine/zone/usamz.htm" target="_blank">&nbsp;USA NOAA&nbsp;</a>
+            Maps Powered By&nbsp;
+            <a href="https://mapbox.com/about/maps/" target="_blank">© Mapbox</a> and&nbsp;
+            <a href="http://openstreetmap.org/about/" target="_blank">© OpenStreetMap</a>
+            &nbsp;//&nbsp;Weather Powered By&nbsp;
+            <a href="https://forecast.io/" target="_blank">Forecast.io</a>,&nbsp;
+            <a href="http://wunderground.com/" target="_blank">© Weather Underground</a>,&nbsp;and&nbsp;
+            <a href="http://nws.noaa.gov/om/marine/zone/usamz.htm" target="_blank">USA NOAA</a>
 
           </div>
           {this.getRadar()}
