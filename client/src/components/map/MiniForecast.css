@@ -16,7 +16,8 @@
   max-height: 85%;
   right: 10px;
   z-index: 4000;
-  background: rgba(39, 58, 65, 0.7);
+  opacity: 1;
+  background: #1E2B33;
   color: #DFE1E8;
   overflow-y: auto;
   padding-bottom: 5px;

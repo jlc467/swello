@@ -43,6 +43,12 @@ class AppContainer extends Component {
           `/${this.props.params.zoneId}`,
         search: this.props.location.search
       });
+    } else if (this.props.params.favoriteId) {
+      this.context.router.push({
+        pathname: `/map/favorite/` +
+          `${this.props.params.favoriteId}`,
+        search: this.props.location.search
+      });
     } else {
       this.context.router.push({
         pathname: `/map`,
