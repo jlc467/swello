@@ -8,8 +8,12 @@ module.exports = {
 
 const RSVP = require('rsvp');
 const Forecast = require('forecast.io');
-const config = require('config');
-const options = config.get('Forecastio');
+const config = require('../../config/server.js');
+const options = {
+  APIKey: config.FORECASTIO_KEY,
+  timeout: config.FORECASTIO_TIMEOUT
+};
+
 
 const forecast = new Forecast(options);
 

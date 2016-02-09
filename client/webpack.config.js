@@ -1,3 +1,5 @@
+/*eslint-disable */
+
 'use strict';
 
 
@@ -17,7 +19,8 @@ const loaders = [
 
 const definePlugin = new webpack.DefinePlugin({
   'process.env': {
-    NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+    NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+    MAP_TOKEN: JSON.stringify(process.env.MAP_TOKEN)
   }
 });
 
@@ -77,6 +80,9 @@ const min = {
       compressor: {
         warnings: false
       }
+    }),
+    new webpack.ProvidePlugin({
+      fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch'
     })
   ],
   module: { loaders },

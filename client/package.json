@@ -13,8 +13,7 @@
     "test:e2e": "cross-env NODE_ENV=development nightwatch-autorun",
     "lint": "eslint --cache .",
     "precommit": "npm run lint -s",
-    "prepush": "npm run test -s && npm run test:e2e -s",
-    "postversion": "git push --follow-tags"
+    "prepush": "npm run test -s && npm run test:e2e -s"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",
@@ -52,13 +51,13 @@
     "nightwatch-autorun": "^2.1.2",
     "parallelshell": "^2.0.0",
     "react": "^0.14.7",
-    "react-collapse": "^1.7.2",
+    "react-collapse": "^2.0.0",
     "react-dnd": "^2.0.2",
     "react-dnd-html5-backend": "^2.0.2",
     "react-dom": "^0.14.7",
     "react-height": "^2.0.3",
     "react-icon-base": "^1.0.0",
-    "react-motion": "^0.3.1",
+    "react-motion": "^0.4.2",
     "react-redux": "^4.1.2",
     "react-router": "^2.0.0-rc5",
     "react-tooltip": "^1.0.4",

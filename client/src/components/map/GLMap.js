@@ -364,7 +364,7 @@ class GLMap extends Component {
           className={this.state.feature ? css.clickable : null}
           id="map"
         ></div>
-          <div className={css.credits}>
+          <div id="credits" className={css.credits}>
             Maps Powered By&nbsp;
             <a href="https://mapbox.com/about/maps/" target="_blank">© Mapbox</a> and&nbsp;
             <a href="http://openstreetmap.org/about/" target="_blank">© OpenStreetMap</a>
