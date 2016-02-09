@@ -20,7 +20,9 @@ const loaders = [
 const definePlugin = new webpack.DefinePlugin({
   'process.env': {
     NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-    MAP_TOKEN: JSON.stringify(process.env.MAP_TOKEN)
+    MAP_TOKEN: JSON.stringify(process.env.MAP_TOKEN),
+    FORECAST_API: JSON.stringify(process.env.FORECAST_API),
+    WUNDERGROUND_KEY: JSON.stringify(process.env.WUNDERGROUND_KEY)
   }
 });
 
