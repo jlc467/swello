@@ -1,7 +1,7 @@
 import React from 'react';
 import TiStarOutline from '../common/svg/star-outline';
 import MdSearch from '../common/svg/search';
-import logoUrl from '../common/svg/Swello2x.png';
+import logoUrl from '../common/svg/Swello.png';
 import ReactTooltip from 'react-tooltip';
 import css from './AppHeader.css';
 
@@ -9,7 +9,7 @@ const AppHeader = (props) =>
   <div className={css['app-header']}>
     <ReactTooltip id="headerTip" effect="solid" place="bottom"/>
     <span onClick={props.goToMap} className={css['app-header-title']}>
-      <img height="37" width="112" src={logoUrl} />
+      <img height="31" width="106" src={logoUrl} />
     </span>
     <div className={css.center}>
       <button
