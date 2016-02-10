@@ -32,8 +32,7 @@ const stats = { colors: true };
 
 
 const development = {
-  devtool: 'cheap-module-eval-source-map',
-
+  devtool: '#eval-source-map',
   entry: [
     './src/index.js',
     'webpack-dev-server/client?http://localhost:8080',

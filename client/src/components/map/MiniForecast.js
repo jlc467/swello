@@ -35,6 +35,7 @@ const MiniForecast = (props) => {
             View Radar
           </div>
           <div
+            data-test="full-forecast-button"
             onClick={() => props.goToFullForecast()}
             className={css.button}
           >

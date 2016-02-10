@@ -33,6 +33,7 @@ class NameStarredItemModal extends Component {
         />
         <form onSubmit={this.addFavorite}>
         <input
+          data-test="favorite-name-location-input"
           maxLength="50"
           required
           autoFocus
@@ -45,6 +46,7 @@ class NameStarredItemModal extends Component {
           onChange={this.handleChange}
         />
         <button
+          data-test="favorite-button-save"
           onClick={this.addFavorite}
           className={css.button}
         >

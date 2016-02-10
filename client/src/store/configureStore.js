@@ -8,8 +8,11 @@ import reducer from '../reducers';
 
 const loggerMiddleware = createLogger();
 
+const args = process.env.NODE_ENV === 'development'
+  ? [thunkMiddleware, loggerMiddleware] : [thunkMiddleware];
+
 const finalCreateStore = compose(
-  applyMiddleware(thunkMiddleware, loggerMiddleware)
+  applyMiddleware(...args)
 )(createStore);
 
 export default function configureStore(initialState) {

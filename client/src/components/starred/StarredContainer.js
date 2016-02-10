@@ -7,7 +7,7 @@ import css from './StarredContainer.css';
 const StarredContainer = (props) =>
   <Motion defaultStyle={{ right: -75 }} style={{ right: spring(0, presets.stiff) }}>
     {value => (
-      <div className={css.container} style={{ right: value.right }}>
+      <div data-test="favorites-sidebar" className={css.container} style={{ right: value.right }}>
         <MdClose className={css.close} onClick={ () => props.toggleStarred() }/>
       <div className={css.header}>Favorites</div>
       <StarredItemsContainer location={props.location} />

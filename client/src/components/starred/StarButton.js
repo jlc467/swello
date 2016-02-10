@@ -23,6 +23,7 @@ const StarButton = (props) => {
     button = (
       <div style={{ display: 'inline-block' }}>
         <button
+          data-test="favorite-button"
           onClick={props.toggleNameStarredItemModal}
           className={css.star}
         >

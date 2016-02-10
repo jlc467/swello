@@ -14,7 +14,7 @@ const MiniForecastConditionsNow = (props) =>
         color="white" style={{ marginTop: -30 }} icon={props.icon}
       />
       <div style={{ display: 'inline-block', verticalAlign: 'top' }}>
-        <span style={{ fontSize: 55, float: 'left' }}>
+        <span data-test="mini-forecast-temp" style={{ fontSize: 55, float: 'left' }}>
           {Math.round(props.temperature)}
         </span>
         <div style={{ float: 'left', display: 'inline', fontSize: 12, marginTop: 10 }}>

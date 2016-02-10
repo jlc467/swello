@@ -12,7 +12,9 @@ const CurrentDay = (props) => {
         style={{ marginLeft: 15 }}
         color="white" icon={props.icon}
       />
-      <div style={{ fontSize: 22, marginLeft: 15, minWidth: 60 }}>
+      <div data-test="full-forecast-current-temp"
+        style={{ fontSize: 22, marginLeft: 15, minWidth: 60 }}
+      >
         {Math.round((props.temp * 10) / 10)}
         <sup>°</sup>
       </div>

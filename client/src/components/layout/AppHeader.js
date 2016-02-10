@@ -16,6 +16,7 @@ const AppHeader = (props) =>
         data-for="headerTip"
         data-tip="Find Forecast On Map"
         onClick={props.goToMap}
+        data-test="find-forecast-button"
         className={css['app-header-button']}
       >
         <MdSearch style={{ position: 'relative', bottom: -1 }} width="35" height="35" />
@@ -26,6 +27,7 @@ const AppHeader = (props) =>
       data-for="headerTip"
       data-place="left"
       data-tip="Show / Hide Favorites"
+      data-test="show-favorites-button"
       onClick={props.toggleStarred}
       className={css['app-header-button']}
     >
