@@ -16,6 +16,12 @@ module.exports = {
       .assert.containsText('#credits a:nth-of-type(3)', 'Forecast.io')
       .assert.containsText('#credits a:nth-of-type(4)', '© Weather Underground')
       .assert.title('Map | Swello')
+      .getLog('browser', function(logEntriesArray) {
+        console.log('Log length: ' + logEntriesArray.length);
+        logEntriesArray.forEach(function(log) {
+          console.log('[' + log.level + '] ' + log.timestamp + ' : ' + log.message);
+        });
+      })
       .end();
   }
 };
