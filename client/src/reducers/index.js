@@ -14,7 +14,6 @@ import {
 }
 from '../actions';
 
-import { routeReducer } from 'react-router-redux';
 import { combineReducers } from 'redux';
 import formatFullForecast from './formatFullForecast';
 import mergeMarine from './mergeMarine';
@@ -138,8 +137,6 @@ function appState(state = initialState, action) {
   }
 }
 
-const reducer = combineReducers(Object.assign({}, { appState }, {
-  routing: routeReducer
-}));
+const reducer = combineReducers(Object.assign({}, { appState }, {}));
 
 export default reducer;
