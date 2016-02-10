@@ -8,7 +8,6 @@ module.exports = {
     browser
       .url('http://localhost:8080/#/map')
       .waitForElementVisible('body', WAIT)
-      .assert.title('Map | Swello')
       .waitForElementVisible('#credits', WAIT)
       .assert.visible('#credits')
       .assert.containsText('#credits span:first-of-type', 'Maps Powered By')
@@ -16,6 +15,7 @@ module.exports = {
       .assert.containsText('#credits a:nth-of-type(2)', '© OpenStreetMap')
       .assert.containsText('#credits a:nth-of-type(3)', 'Forecast.io')
       .assert.containsText('#credits a:nth-of-type(4)', '© Weather Underground')
+      .assert.title('Map | Swello')
       .end();
   }
 };
