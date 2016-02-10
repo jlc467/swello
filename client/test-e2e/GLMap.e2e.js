@@ -1,7 +1,7 @@
 'use strict';
 
 
-const WAIT = 1000;
+const WAIT = 10000;
 
 module.exports = {
   'Credit hrefs should appear on screen'(browser) {
