@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import loader from './svg/radio.svg';
-import css from './image.css';
+import css from './Image.css';
 
 class Image extends Component {
   constructor(props) {
