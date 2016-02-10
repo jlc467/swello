@@ -13,7 +13,7 @@ import { Router, Route, Redirect } from 'react-router';
 import { getStarred } from './actions';
 import appHistory from './appHistory';
 import redirectBrowsers from './redirectBrowsers';
-redirectBrowsers();
+//redirectBrowsers();
 
 const store = configureStore();
 

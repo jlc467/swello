@@ -8,7 +8,9 @@ module.exports = {
     browser
       .url('http://localhost:8080/#/map')
       .waitForElementVisible('body', WAIT)
+      .assert.title('Map | Swello')
       .waitForElementVisible('#credits', WAIT)
+      .assert.visible('#credits')
       .assert.containsText('#credits span:first-of-type', 'Maps Powered By')
       .assert.containsText('#credits a:first-of-type', '© Mapbox')
       .assert.containsText('#credits a:nth-of-type(2)', '© OpenStreetMap')
