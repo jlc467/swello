@@ -6,7 +6,7 @@ const WAIT = 10000;
 module.exports = {
   'Credit hrefs should appear on screen'(browser) {
     browser
-      .url('http://localhost:8080/')
+      .url('http://localhost:8080/#/map')
       .waitForElementVisible('body', WAIT)
       .waitForElementVisible('#credits', WAIT)
       .assert.containsText('#credits span:first-of-type', 'Maps Powered By')
