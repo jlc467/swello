@@ -1,5 +1,5 @@
-require('babel-polyfill');
-require('./global-css/normalize.css');
+import 'babel-polyfill';
+import './global-css/normalize.css';
 document.title = 'Swello';
 import React from 'react';
 import { render } from 'react-dom';
