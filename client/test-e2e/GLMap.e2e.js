@@ -8,6 +8,13 @@ module.exports = {
     browser
       .url('http://localhost:8080/#/map')
       .waitForElementVisible('body', WAIT)
+      .pause(1000)
+      .getLog('browser', function(logEntriesArray) {
+        console.log('Log length: ' + logEntriesArray.length);
+        logEntriesArray.forEach(function(log) {
+          console.log('[' + log.level + '] ' + log.timestamp + ' : ' + log.message);
+        });
+      })
       .waitForElementVisible('#credits', WAIT)
       .assert.visible('#credits')
       .assert.containsText('#credits span:first-of-type', 'Maps Powered By')
@@ -16,12 +23,6 @@ module.exports = {
       .assert.containsText('#credits a:nth-of-type(3)', 'Forecast.io')
       .assert.containsText('#credits a:nth-of-type(4)', '© Weather Underground')
       .assert.title('Map | Swello')
-      .getLog('browser', function(logEntriesArray) {
-        console.log('Log length: ' + logEntriesArray.length);
-        logEntriesArray.forEach(function(log) {
-          console.log('[' + log.level + '] ' + log.timestamp + ' : ' + log.message);
-        });
-      })
       .end();
   }
 };
