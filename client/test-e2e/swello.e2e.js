@@ -35,7 +35,7 @@ module.exports = {
         });
       })
       .click("#map")
-      .pause(10000)
+      .pause(20000)
       .getLog('browser', function(logEntriesArray) {
         console.log('Log length: ' + logEntriesArray.length);
         logEntriesArray.forEach(function(log) {
@@ -43,6 +43,12 @@ module.exports = {
         });
       })
       .waitForElementVisible("[data-test='mini-forecast-temp']", WAIT);
+      .getLog('browser', function(logEntriesArray) {
+        console.log('Log length: ' + logEntriesArray.length);
+        logEntriesArray.forEach(function(log) {
+          console.log('[' + log.level + '] ' + log.timestamp + ' : ' + log.message);
+        });
+      })
   },
   'Clicking full forecast loads full forecast route'(browser) {
     browser
