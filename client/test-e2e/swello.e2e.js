@@ -27,8 +27,15 @@ module.exports = {
   },
   'Clicking map should get current forecast'(browser) {
     browser
-      .pause(3000)
+      .pause(9000)
       .click("#map")
+      .pause(3000)
+      .getLog('browser', function(logEntriesArray) {
+        console.log('Log length: ' + logEntriesArray.length);
+        logEntriesArray.forEach(function(log) {
+          console.log('[' + log.level + '] ' + log.timestamp + ' : ' + log.message);
+        });
+      })
       .waitForElementVisible("[data-test='mini-forecast-temp']", WAIT);
   },
   'Clicking full forecast loads full forecast route'(browser) {
