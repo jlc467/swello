@@ -31,16 +31,10 @@
       "desiredCapabilities": {
         "browserName": "chrome",
         "javascriptEnabled": true,
-        "acceptSslCerts": true
-      }
-    },
-
-    "chrome" : {
-      "args": ["--ignore-gpu-blacklist", "--use-gl", "--no-sandbox", "--disable-web-security"],
-      "desiredCapabilities": {
-        "browserName": "chrome",
-        "javascriptEnabled": true,
-        "acceptSslCerts": true
+        "acceptSslCerts": true,
+        "chromeOptions" : {
+          "args": ["--ignore-gpu-blacklist", "--use-gl", "--no-sandbox", "--disable-web-security"]
+        }
       }
     }
   }
