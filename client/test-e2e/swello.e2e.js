@@ -42,7 +42,7 @@ module.exports = {
           console.log('[' + log.level + '] ' + log.timestamp + ' : ' + log.message);
         });
       })
-      .waitForElementVisible("[data-test='mini-forecast-temp']", WAIT);
+      .waitForElementVisible("[data-test='mini-forecast-temp']", WAIT)
       .getLog('browser', function(logEntriesArray) {
         console.log('Log length: ' + logEntriesArray.length);
         logEntriesArray.forEach(function(log) {
