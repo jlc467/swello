@@ -27,9 +27,15 @@ module.exports = {
   },
   'Clicking map should get current forecast'(browser) {
     browser
-      .pause(9000)
+      .pause(20000)
+      .getLog('browser', function(logEntriesArray) {
+        console.log('Log length: ' + logEntriesArray.length);
+        logEntriesArray.forEach(function(log) {
+          console.log('[' + log.level + '] ' + log.timestamp + ' : ' + log.message);
+        });
+      })
       .click("#map")
-      .pause(3000)
+      .pause(10000)
       .getLog('browser', function(logEntriesArray) {
         console.log('Log length: ' + logEntriesArray.length);
         logEntriesArray.forEach(function(log) {
