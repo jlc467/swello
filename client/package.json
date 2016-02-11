@@ -38,6 +38,7 @@
     "eslint-plugin-react": "^3.16.1",
     "exports-loader": "^0.6.2",
     "file-loader": "^0.8.5",
+    "firefox-profile": "^0.3.11",
     "glob": "^6.0.4",
     "history": "^2.0.0",
     "html-webpack-plugin": "^2.7.2",
