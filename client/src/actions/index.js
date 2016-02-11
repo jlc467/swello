@@ -106,6 +106,7 @@ const getMarine = (zoneId, fetchedTimestamp = null) =>
 
     fetch(`${FORECAST_API}/api/marine`, {
       method: 'post',
+      mode: 'cors',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json'
@@ -158,6 +159,7 @@ export const getCurrentForecast = (coords, zoneId) =>
 
     fetch(`${FORECAST_API}/api/forecast/day`, {
       method: 'post',
+      mode: 'cors',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json'
@@ -198,6 +200,7 @@ export const getFullForecast = (coords, zoneId) =>
 
     fetch(`${FORECAST_API}/api/forecast`, {
       method: 'post',
+      mode: 'cors',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json'
