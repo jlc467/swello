@@ -1,0 +1,6 @@
+---
+applications:
+- name: swell467
+  memory: 128MB
+  instances: 1
+  command: node ./src/index.js
