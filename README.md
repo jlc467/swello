@@ -1,6 +1,6 @@
 # Swello
 
-Marine weather forecast mashup powered by NOAA and Forecast.io
+Marine weather forecast mashup powered by [NOAA](http://www.noaa.gov/) and [Forecast.io](https://forecast.io/)
 
 ![preview](preview.png?raw=true)
 ![preview2](preview2.png?raw=true)
@@ -35,9 +35,10 @@ Marine weather forecast mashup powered by NOAA and Forecast.io
  - Webpack dev server runs on `http://localhost:8080` by default
 
 ##Next Steps
+ - Celsius option
  - Build React Native iOS/Android versions
  - Implement auth so favorites can persist beyond local storage
-  	
+ - Get rid of inline functions ([react/jsx-no-bind](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md))  	
 
  
 
