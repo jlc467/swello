@@ -7,6 +7,7 @@
   border: 3px solid #3488BB;
   border-radius: 4px;
   margin-bottom: 5px;
+  overflow: hidden;
 }
 
 .text {

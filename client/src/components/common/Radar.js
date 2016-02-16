@@ -10,7 +10,7 @@ const radarWidthHeight = {
   height: 480
 };
 
-const URL = `http://api.wunderground.com/api/` +
+const URL = `https://api.wunderground.com/api/` +
   `${config.wunderground}/animatedradar/image.gif?&radius=100&newmaps=1&width=` +
   `${radarWidthHeight.width}&height=${radarWidthHeight.height}` +
   `&num=15&delay=1&noclutter=1&smooth=1&timelabel=1&timelabel.y=12`;

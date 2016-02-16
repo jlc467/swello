@@ -12,8 +12,8 @@ import Error from './components/common/Error';
 import { Router, Route, Redirect } from 'react-router';
 import { getStarred } from './actions';
 import appHistory from './appHistory';
-import redirectBrowsers from './redirectBrowsers';
-redirectBrowsers();
+// import redirectBrowsers from './redirectBrowsers';
+// redirectBrowsers();
 
 const store = configureStore();
 

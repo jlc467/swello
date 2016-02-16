@@ -38,9 +38,13 @@ const development = {
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server'
   ],
-  output: { filename: 'bundle.js', path: path.resolve('example') },
+  output: { filename: 'bundle.js' },
   plugins: [
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'Swello',
+      template: 'index.ejs',
+      inject: 'body' // Inject all scripts into the body
+    }),
     definePlugin,
     new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
@@ -76,6 +80,11 @@ const min = {
     libraryTarget: 'umd'
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Swello',
+      template: 'index.ejs',
+      inject: 'body' // Inject all scripts into the body
+    }),
     definePlugin,
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
@@ -88,10 +97,7 @@ const min = {
   ],
   module: { loaders },
   resolve,
-  stats,
-  externals: {
-    react: { root: 'React', commonjs2: 'react', commonjs: 'react', amd: 'react' }
-  }
+  stats
 };
 
 
