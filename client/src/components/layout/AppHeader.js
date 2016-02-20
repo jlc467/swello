@@ -1,7 +1,6 @@
 import React from 'react';
 import TiStarOutline from '../common/svg/star-outline';
 import MdSearch from '../common/svg/search';
-import logoUrl from '../common/svg/Swello.png';
 import ReactTooltip from 'react-tooltip';
 import css from './AppHeader.css';
 
