@@ -15,16 +15,19 @@
   z-index: 3000;
   text-align: center;
   color: #F4C66C;
+  background-image: url('../common/svg/Swello.png');
+  background-repeat: no-repeat;
+  background-position: 20px 3px;
 }
 
 .app-header-title {
+
+  text-indent: -9999px;
   position: absolute;
-  left: 0;
+  left: 35px;
+  top: 3px;
   cursor: pointer;
-  padding-right: 10px;
   padding-left: 35px;
-  padding-right: 80px;
-  padding-top:3px;
 }
 
 .app-header-button {

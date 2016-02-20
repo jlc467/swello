@@ -9,7 +9,7 @@ const AppHeader = (props) =>
   <div className={css['app-header']}>
     <ReactTooltip id="headerTip" effect="solid" place="bottom"/>
     <span onClick={props.goToMap} className={css['app-header-title']}>
-      <img height="31" width="106" src={logoUrl} />
+      Swello
     </span>
     <div className={css.center}>
       <button

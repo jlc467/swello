@@ -38,7 +38,7 @@ const development = {
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server'
   ],
-  output: { filename: 'bundle.js' },
+  output: { filename: 'bundle.js', path: '/'  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Swello',

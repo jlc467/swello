@@ -31,7 +31,7 @@
 
 .credits {
   position: absolute;
-  z-index: 9999999999;
+  z-index: 998;
   left: 10px;
   bottom: 10px;
   border-radius: 15px;
