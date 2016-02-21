@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import mapboxgl from '../../../node_modules/mapbox-gl/dist/mapbox-gl.js';
 import GeoLocate from './GeoLocate';
 import ToggleSatellite from './ToggleSatellite';
 import MiniForecast from './MiniForecast';

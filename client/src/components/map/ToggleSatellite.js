@@ -9,7 +9,6 @@ const ToggleSatellite = (props) =>
     data-place="left"
     style={{
       zIndex: 999,
-      display: 'block',
       bottom: props.bottom,
       right: props.right,
       width: 60,
