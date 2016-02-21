@@ -54,3 +54,12 @@
 .app-header-button svg {
   fill: inherit;
 }
+
+@media only screen and
+    (-webkit-min-device-pixel-ratio: 1.5) {
+  .app-header {
+    background-position: 15px 3px;
+    background-size: 106px 31px;
+    background-image: url('../common/svg/Swello2x.png');
+  }
+}

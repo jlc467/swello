@@ -153,8 +153,8 @@ class GLMap extends Component {
     const style = {
       zIndex: 9999,
       position: 'absolute',
-      top: this.state.feature.top + 15,
-      left: this.state.feature.left + 2
+      top: this.state.feature.top + 20,
+      left: this.state.feature.left - 3
     };
 
     return (
