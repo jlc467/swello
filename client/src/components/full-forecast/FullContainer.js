@@ -145,7 +145,7 @@ class FullContainer extends Component {
     }
 
     if (this.props.loadingForecast === true) {
-      return <img className={css.loader} src={loader}/>;
+      return <div className={css.loader}><img src={loader}/></div>;
     }
     return (
       <div style={{ paddingRight }} className={css.container}>

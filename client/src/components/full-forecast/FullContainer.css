@@ -7,8 +7,9 @@
 }
 
 .loader {
-  position: absolute;
-  margin: auto;
-  right: 50%;
-  top: 100px;
+  margin-top: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

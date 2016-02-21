@@ -56,7 +56,7 @@ class Image extends Component {
     return (
       <div>
         {!this.state.loaded
-          ? <img className={css.loader} src={loader}/>
+          ? <div className={css.loader}><img src={loader}/></div>
           : null
         }
         <img ref="img" {...props} className={rootClassName} />
