@@ -24,3 +24,15 @@
   font-size: 15px;
   margin-left: 11px;
 }
+
+.temps {
+  font-size: 22px;
+  margin-left: 15px;
+  min-width: 60px;
+}
+
+@media screen and (max-width: 440px) {
+  .temps {
+    display: none;
+  }
+}

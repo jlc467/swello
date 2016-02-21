@@ -411,3 +411,10 @@ td,
 th {
   padding: 0;
 }
+
+@media screen and (max-width: 440px) {
+  .__react_component_tooltip {
+   display: none !important;
+  }
+}
+

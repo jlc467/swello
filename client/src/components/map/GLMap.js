@@ -213,7 +213,7 @@ class GLMap extends Component {
         <ToggleSatellite
           onClick={this.toggleSatellite}
           bottom="20"
-          right={this.props.offSet + 50}
+          right={this.props.offSet + 70}
           css={css.button}
         />
         {!this.props.disableGetLocation ? <GeoLocate

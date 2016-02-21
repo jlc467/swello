@@ -2,20 +2,40 @@
   margin-top: 10px;
 }
 
+.buttons {
+  float: right;
+}
+
 .button {
   background-color: white;
   cursor: pointer;
-  margin: 0px auto;
   margin-right: 5px;
   height: 40px;
-  width: 40px;
+  width: 120px;
   border: none;
   border-radius: 3px;
-  font-size: 12px;
-  text-align: center;
   color: #24475F;
+  text-align: center;
 }
 
 .button:focus {
   outline: none;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 440px) {
+  .button {
+    width: 45%;
+    display: inline;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+  .buttons {
+    float: none;
+    margin-top: 5px;
+  }
 }

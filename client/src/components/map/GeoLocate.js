@@ -6,13 +6,15 @@ const GeoLocate = (props) =>
     onClick={() => props.onClick() }
     data-for="headerTip"
     data-tip="Geolocate Me"
-    data-place="left" width="20" height="20"
+    data-place="left"
     style={{
       zIndex: 999,
       display: 'block',
       bottom: props.bottom,
       right: props.right,
-      position: 'absolute'
+      position: 'absolute',
+      width: 60,
+      height: 40
     }}
     className={props.css}
   >

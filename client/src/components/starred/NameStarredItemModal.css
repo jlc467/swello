@@ -51,3 +51,15 @@
   fill: #A4C294;
   width: 20px;
 }
+
+
+@media screen and (max-width: 440px) {
+  .container {
+    padding-right: 0px;
+    padding-left: 0px;
+    left: 0;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}

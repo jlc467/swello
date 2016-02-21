@@ -9,11 +9,11 @@ const CurrentDay = (props) => {
     <div className={css.container}>
         <div className={css.now}>NOW</div>
       <Skycons // weather icon
-        style={{ marginLeft: 15 }}
+        style={{ marginLeft: 15, minWidth: 50 }}
         color="white" icon={props.icon}
       />
       <div data-test="full-forecast-current-temp"
-        style={{ fontSize: 22, marginLeft: 15, minWidth: 60 }}
+        className={css.temps}
       >
         {Math.round((props.temp * 10) / 10)}
         <sup>°</sup>

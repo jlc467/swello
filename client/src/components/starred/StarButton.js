@@ -21,7 +21,7 @@ const StarButton = (props) => {
     );
   } else {
     button = (
-      <div style={{ display: 'inline-block' }}>
+      <div className={css.button}>
         <button
           data-test="favorite-button"
           onClick={props.toggleNameStarredItemModal}

@@ -1,3 +1,6 @@
+.button {
+  display: inline-block;
+}
 .button:focus {
   outline: none;
 }
@@ -38,4 +41,11 @@
   padding-top: 4px;
   padding-left: 5px;
   padding-right: 2px;
+}
+
+@media screen and (max-width: 440px) {
+  .button {
+    width: 100%;
+    text-align: center;
+  }
 }

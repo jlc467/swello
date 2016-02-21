@@ -1,6 +1,4 @@
 import React from 'react';
-import TiRadar from '../common/svg/radar';
-import MdSwapVert from '../common/svg/swap-vert';
 import css from './FullPageHeader.css';
 import StarButton from '../starred/StarButton';
 
@@ -20,19 +18,21 @@ const FullPageHeader = (props) => {
         showNameStarredItemModal={props.showNameStarredItemModal}
         toggleNameStarredItemModal={props.toggleNameStarredItemModal}
       />
-      <div style={{ float: 'right' }}>
+      <div className={css.buttons}>
       <button
         onClick={props.toggleRadar}
         data-for="fullTip"
         data-tip="View Radar"
         className={css.button}
-      ><TiRadar width="20" height="20" /></button>
+      >Radar</button>
       <button
         onClick={props.toggleDetailAll}
         data-for="fullTip"
         data-tip="Toggle Detail View"
         className={css.button}
-      ><MdSwapVert width="20" height="20" /></button>
+      >
+        Toggle Detail
+      </button>
       </div>
       <h4 style={{ color: 'white' }}>
         7-Day Forecast for {locationName}
