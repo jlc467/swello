@@ -21,11 +21,11 @@
 }
 
 .loader {
-  position: absolute;
-  margin: auto;
-  right: 50%;
-  top: 50%;
-  margin-bottom: 275px;
+  margin-top: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 9999999999999;
 }
 

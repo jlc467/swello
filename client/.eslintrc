@@ -6,6 +6,9 @@
     "mocha": true,
     "node": true
   },
+  "globals": {
+    "mapboxgl": false
+  },
   "rules": {
     "no-param-reassign": 0,
     'react/jsx-no-bind': 0,

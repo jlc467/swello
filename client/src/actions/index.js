@@ -140,7 +140,6 @@ const checkIfForecastExpired = (forecast, coords) => {
 
 export const getCurrentForecast = (coords, zoneId) =>
   (dispatch, getState) => {
-    console.log(coords, zoneId, 'getting forecast');
     if (checkIfForecastExpired(getState().appState.forecast, coords) === false) {
       // keep existing forecast data
       return;
@@ -168,10 +167,8 @@ export const getCurrentForecast = (coords, zoneId) =>
       body: JSON.stringify({ coords, time: moment().format() })
     }).then(response => {
       if (response.status >= 200 && response.status < 300) {
-        console.log('got response', response)
         return response.json();
       }
-      console.log(response.statusText);
       const error = new Error(response.statusText);
       throw error;
     }).then(json => dispatch(gotCurrentForecast(json, coords)))
