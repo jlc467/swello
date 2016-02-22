@@ -38,6 +38,8 @@ function appState(state = initialState, action) {
       return Object.assign({}, state, {
         loadingForecast: true,
         currentForecast: null,
+        error: false,
+        currentForecastError: null,
         marine: action.clearMarine === true ? null : state.marine
       });
     case LOADING_MARINE:
