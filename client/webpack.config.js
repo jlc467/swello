@@ -88,6 +88,7 @@ const min = {
   output: {
     filename: `${require('./package.json').name}.min.js`,
     path: path.resolve('build'),
+    publicPath: '/',
     library: 'Component',
     libraryTarget: 'umd'
   },

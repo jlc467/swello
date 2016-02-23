@@ -2,7 +2,12 @@
   "firebase": "swello2",
   "public": "build",
   "cleanUrls": true,
-  "rewrites": [ {
+  "rewrites": [
+    { "source": "/map/*", "destination": "/index.html"},
+    { "source": "/favorite/*", "destination": "/index.html"},
+    { "source": "/full/*", "destination": "/index.html"},
+    { "source": "/error/*", "destination": "/index.html"},
+  {
     "source": "**",
     "destination": "/index.html"
   } ],
