@@ -38,7 +38,11 @@ const development = {
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server'
   ],
-  output: { filename: 'bundle.js', path: '/'  },
+  output: {
+    filename: 'bundle.js',
+    path: '/',
+    publicPath: '/'
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Swello',
@@ -61,7 +65,15 @@ const development = {
   stats,
   devServer: {
     hot: true,
-    historyApiFallback: true,
+    historyApiFallback: {
+      index: 'index.html',
+      rewrites: [
+        { from: /\/map/, to: '/index.html'},
+        { from: /\/favorite/, to: '/index.html'},
+        { from: /\/full/, to: '/index.html'},
+        { from: /\/error/, to: '/index.html'},
+      ]
+    },
     stats: {
       // Do not show list of hundreds of files included in a bundle
       chunkModules: false,
