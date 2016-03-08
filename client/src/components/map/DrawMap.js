@@ -5,10 +5,10 @@ import loader from '../common/svg/radio.svg';
 import Firebase from 'firebase';
 import ReactFireMixin from 'reactfire';
 import reactMixin from 'react-mixin';
-import { FIREBASE_URL } from '../../../config/client';
+import config from '../../../config/client';
 import { isEmpty } from 'lodash';
 
-const ref = new Firebase(`${FIREBASE_URL}/geo`);
+const ref = new Firebase(`${config.FIREBASE_URL}/geo`);
 
 class DrawMap extends Component {
   constructor(props) {
