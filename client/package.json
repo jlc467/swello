@@ -47,6 +47,7 @@
     "isparta": "^4.0.0",
     "json-loader": "^0.5.4",
     "lodash": "^4.1.0",
+    "mapbox-gl": "^0.15.0",
     "moment": "^2.11.1",
     "nightwatch-autorun": "^2.1.2",
     "parallelshell": "^2.0.0",
