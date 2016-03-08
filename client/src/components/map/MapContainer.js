@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GLMap from './GLMap';
+import DrawMap from './DrawMap';
 import config from '../../../config/client';
 import { connect } from 'react-redux';
 import { getCurrentForecast, getLocation, disableGetLocation } from '../../actions';
@@ -54,9 +55,28 @@ class MapContainer extends Component {
       position: 'absolute',
       top: 40,
       bottom: 0,
-      width,
-      cursor: 'pointer'
+      width
     };
+
+    if (location.pathname.indexOf('drawmap') > -1) {
+      return (
+        <div>
+          <DrawMap
+            baselayer="mz10nv15"
+            getLocation={() => dispatch(getLocation())}
+            disableGetLocation={this.props.disableGetLocation}
+            location={location}
+            locationCoords={locationCoords}
+            mapStyle={mapStyle}
+            offSet={offSet}
+            params={params}
+            ref="glmap"
+            token={config.token.map}
+            view={Object.assign(this.mapView, { style: 'mapbox://styles/jcmuse/cikcm77hi007l9fm127xym4v1' })}
+          />
+        </div>
+      );
+    }
 
     return (
       <div>

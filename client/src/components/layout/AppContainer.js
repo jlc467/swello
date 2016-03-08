@@ -56,6 +56,12 @@ class AppContainer extends Component {
       });
     }
   }
+  goToDrawMap() {
+    this.context.router.push({
+      pathname: `/drawmap`,
+      search: this.props.location.search
+    });
+  }
   render() {
     if (this.props.error) {
       return <Error/>;
@@ -64,6 +70,7 @@ class AppContainer extends Component {
       <div className={css.container}>
         <AppHeader
           goToMap={() => this.goToMap()}
+          goToDrawMap={() => this.goToDrawMap()}
           starredEnabled={this.props.starredEnabled}
           toggleStarred={() => this.toggleStarred()}
         />

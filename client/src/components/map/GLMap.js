@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import GeoLocate from './GeoLocate';
-import ToggleSatellite from './ToggleSatellite';
 import MiniForecast from './MiniForecast';
 import Radar from '../common/Radar';
 import css from './GLMap.css';
@@ -14,10 +13,8 @@ class GLMap extends Component {
       loaded: false,
       loadingLocation: false,
       feature: null,
-      clearForecast: false,
-      showSatelliteLayer: false
+      clearForecast: false
     };
-    this.toggleSatellite = this.toggleSatellite.bind(this);
   }
   componentDidMount() {
     mapboxgl.accessToken = this.props.token;
@@ -209,12 +206,6 @@ class GLMap extends Component {
   getMapButtons() {
     return (
       <div>
-        <ToggleSatellite
-          onClick={this.toggleSatellite}
-          bottom="20"
-          right={this.props.offSet + 70}
-          css={css.button}
-        />
         {!this.props.disableGetLocation ? <GeoLocate
           onClick={() => this.goToCurrentLocation(this.props.locationCoords)}
           bottom="20"
@@ -224,15 +215,6 @@ class GLMap extends Component {
         /> : null}
       </div>
     );
-  }
-  // toggle satellite map layer
-  toggleSatellite() {
-    if (this.state.showSatelliteLayer === false) {
-      this.map.setStyle('mapbox://styles/jcmuse/cikcm77hi007l9fm127xym4v1');
-    } else {
-      this.map.setStyle('mapbox://styles/jcmuse/cih9a9bbq0023rom4g8ehgvf0');
-    }
-    this.setState({ showSatelliteLayer: !this.state.showSatelliteLayer });
   }
   // when user clicks on map, place marker on map and get forecast data
   handleMarkerPlacement(coords, zoneId) {
@@ -360,7 +342,6 @@ class GLMap extends Component {
         {loadingIndicator}
         <div
           style={this.props.mapStyle}
-          className={this.state.feature ? css.clickable : null}
           id="map"
         ></div>
           <div id="credits" className={css.credits}>
@@ -371,6 +352,8 @@ class GLMap extends Component {
             <a href="https://forecast.io/" target="_blank">Forecast.io</a>,&nbsp;
             <a href="http://wunderground.com/" target="_blank">© Weather Underground</a>,&nbsp;and&nbsp;
             <a href="http://nws.noaa.gov/om/marine/zone/usamz.htm" target="_blank">USA NOAA</a>
+            &nbsp;//&nbsp;
+            <a href="https://github.com/jlc467/swello" target="_blank">GitHub Repo</a>
 
           </div>
           {this.getRadar()}

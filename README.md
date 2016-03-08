@@ -26,6 +26,14 @@ Marine weather forecast mashup powered by [NOAA](http://www.noaa.gov/) and [Fore
  - [Climacons](http://adamwhitcroft.com/climacons/) by Adam Whitcroft 
  - [Codeship.com](http://codeship.com) for CI
 
+##Ocean Depth
+Tampa Bay ocean depth data is shown in feet on the satellite map layer `mapbox://styles/jcmuse/cikcm77hi007l9fm127xym4v1`
+
+###Steps to add NOAA depth data to Mapbox style
+- Download ENC chart from NOAA using the [Interactive Chart catalog](http://www.charts.noaa.gov/InteractiveCatalog/nrnc.shtml?enc=1)
+- Use [ogr](http://www.gdal.org/ogr_utilities.html)'s [S-57 driver](http://www.gdal.org/drv_s57.html) to convert to shapefile, e.g. `ogr2ogr --config OGR_S57_OPTIONS RETURN_PRIMITIVES=ON,RETURN_LINKAGES=ON,LNAM_REFS=ON,SPLIT_MULTIPOINT=ON,ADD_SOUNDG_DEPTH=ON -nlt POINT25d US4FL10M.shp US4FL10M.000 SOUNDG` [Blog Post: Processing S57 soundings](http://blog.perrygeo.net/2005/12/03/hello-world/)
+- Open in a GIS editor tool, e.g. QGIS and convert meters to feet
+- Upload shapefile to Mapbox Studio and add to style
 
 ##How to run it
  - see [server.js](https://github.com/jlc467/swello/blob/master/server/config/server.js) and [client.js](https://github.com/jlc467/swello/blob/master/client/config/client.js) config files

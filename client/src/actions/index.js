@@ -56,7 +56,7 @@ export const disableGetLocation = () => (
 export const getLocation = () =>
   (dispatch) => {
     const options = {
-      enableHighAccuracy: false,
+      enableHighAccuracy: true,
       timeout: 5000,
       maximumAge: 300000
     };

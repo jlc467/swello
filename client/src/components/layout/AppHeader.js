@@ -1,6 +1,7 @@
 import React from 'react';
 import TiStarOutline from '../common/svg/star-outline';
 import MdSearch from '../common/svg/search';
+import TiCompass from '../common/svg/compass';
 import ReactTooltip from 'react-tooltip';
 import css from './AppHeader.css';
 
@@ -19,6 +20,15 @@ const AppHeader = (props) =>
         className={css['app-header-button']}
       >
         <MdSearch style={{ position: 'relative', bottom: -1 }} width="35" height="35" />
+      </button>
+      <button
+        data-for="headerTip"
+        data-tip="Plan Boat Trip"
+        onClick={props.goToDrawMap}
+        data-test="plan-boat-trip-button"
+        className={css['app-header-button']}
+      >
+        <TiCompass style={{ position: 'relative', bottom: 0 }} width="35" height="35" />
       </button>
     </div>
     {props.starredEnabled ? <button

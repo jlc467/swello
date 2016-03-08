@@ -25,6 +25,7 @@ render(
     <Router history={browserHistory}>
       <Redirect from="/" to="map"/>
       <Route path="/" component={AppContainer}>
+        <Route path="/drawmap" component={MapContainer}/>
         <Route path="/map" component={MapContainer}/>
         <Route path="/map/mini/:lat/:long(/:zoneId)" component={MapContainer}/>
         <Route path="/map/favorite/:favoriteId" component={MapContainer}/>

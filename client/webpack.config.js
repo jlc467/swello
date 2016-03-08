@@ -68,6 +68,7 @@ const development = {
     historyApiFallback: {
       index: 'index.html',
       rewrites: [
+        { from: /\/drawmap/, to: '/index.html'},
         { from: /\/map/, to: '/index.html'},
         { from: /\/favorite/, to: '/index.html'},
         { from: /\/full/, to: '/index.html'},
