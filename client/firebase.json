@@ -3,6 +3,7 @@
   "public": "build",
   "cleanUrls": true,
   "rewrites": [
+    { "source": "/drawmap", "destination": "/index.html"},
     { "source": "/map/*", "destination": "/index.html"},
     { "source": "/favorite/*", "destination": "/index.html"},
     { "source": "/full/*", "destination": "/index.html"},
