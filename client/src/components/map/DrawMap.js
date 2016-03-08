@@ -8,8 +8,6 @@ import reactMixin from 'react-mixin';
 import config from '../../../config/client';
 import { isEmpty } from 'lodash';
 
-console.log(config.FIREBASE_URL);
-
 const ref = new Firebase(`${config.FIREBASE_URL}/geo`);
 
 class DrawMap extends Component {

@@ -4,5 +4,5 @@ module.exports = {
   },
   FORECAST_API: process.env.FORECAST_API || 'http://localhost:8081',
   wunderground: process.env.WUNDERGROUND_KEY || 'wundergroundapikeyhere',
-  FIREBASE_URL: process.env.FIREBASE_URL || 'firebaseendpointhere'
+  FIREBASE_URL: process.env.FIREBASE_URL || 'https://swello2.firebaseio.com'
 };
