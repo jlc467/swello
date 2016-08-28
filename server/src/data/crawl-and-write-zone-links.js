@@ -64,7 +64,7 @@ function writeLinks(links) {
   });
 }
 
-getLinks(['http://weather.noaa.gov/pub/data/forecasts/marine/coastal/']).then(function getLinksCallback(links) {
+getLinks(['http://tgftp.nws.noaa.gov/data/forecasts/marine/coastal/']).then(function getLinksCallback(links) {
   const linksObject = links.reduce(function reduceLink(map, url) {
     const zone = url.substring(url.lastIndexOf('/') + 1, url.length - 4);
     map[zone] = url;
