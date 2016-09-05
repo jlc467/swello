@@ -131,7 +131,8 @@ function parseForecastText(text) {
     const advisory = getAdvisory(originalForecastArray);
     const forecasts = getForecastObject(dayByDayArray, issuedMoment);
     return objectAssign({}, forecasts, {
-      advisory
+      advisory,
+      issuedMoment
     });
   } catch (exception) {
     throw exception;
