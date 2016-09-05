@@ -14,7 +14,7 @@ const fetchAndSaveForecast = zoneId =>
         Accept: 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ zoneId: 'amz135' })
+      body: JSON.stringify({ zoneId })
     }).then(response => {
       if (response.status >= 200 && response.status < 300) {
         return response.json();
